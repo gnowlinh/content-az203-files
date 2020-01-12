@@ -1,11 +1,14 @@
-$resourceGroupName = "cosmosdb"
-$location = "westus"
-$accountName= "laaz203cosmosdb"
-$databaseName = "myDatabase"
 
 az group create `
  -n $resourceGroupName `
  -l $location
+
+
+$resourceGroupName = "1-965de8-playground-sandbox"
+$location = "westus"
+$accountName= "laaz203cosmosdb"
+$databaseName = "myDatabase"
+
 
 # Create a SQL API Cosmos DB account with session consistency and multi-master enabled
 az cosmosdb create `
@@ -14,7 +17,7 @@ az cosmosdb create `
  --kind GlobalDocumentDB `
  --locations "West US=0" "North Central US=1" `
  --default-consistency-level Strong `
- --enable-multiple-write-locations true `
+ #--enable-multiple-write-locations true `
  --enable-automatic-failover true
 
 # Create a database
