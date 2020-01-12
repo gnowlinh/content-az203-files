@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Configuration;
 using System.Linq;
@@ -17,10 +17,10 @@ namespace linuxacademy.az203.storage.cosmosdb
         private static DocumentClient _client;
         private const string _databaseId = "myDatabase";
         private const string _collectionId = "Families";
-        private const string _endpoint = 
-            "";
-        private const string _key = 
-            "";
+        private const string _endpoint =
+            "https://laaz203cosmosdb.documents.azure.com:443/";
+        private const string _key =
+            "p5toUOOtV48DPBYZ9c6dBzS9OeVdK03VYy2lzMwr7rkUhH7gEvHXe9HEdD9p6kjH1JwyQsMSG4scSQIiqd5reg==";
 
         static void Main(string[] args)
         {
